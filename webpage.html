@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeevan Thesis Paper: Explaining AI & CNNs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light blue-gray background */
+            color: #334155; /* Darker text */
+            scroll-behavior: smooth;
+        }
+        .section-padding {
+            padding: 4rem 1rem;
+        }
+        @media (min-width: 640px) {
+            .section-padding {
+                padding: 6rem 2rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .section-padding {
+                padding: 8rem 4rem;
+            }
+        }
+        .container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn-primary {
+            @apply bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300 ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-blue-800">Jeevan Thesis Paper</a>
+            <div class="space-x-6 hidden md:flex">
+                <a href="#home" class="text-gray-600 hover:text-blue-800 transition duration-200">Home</a>
+                <a href="#research" class="text-gray-600 hover:text-blue-800 transition duration-200">About Research</a>
+                <a href="#how-it-works" class="text-gray-600 hover:text-blue-800 transition duration-200">How It Works</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-800 transition duration-200">Contact</a>
+            </div>
+            <!-- <button class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button> -->
+        </div>
+    </nav>
+
+    <section id="home" class="section-padding bg-gradient-to-r from-blue-500 to-indigo-600 text-white flex items-center min-h-screen">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-lg">
+                Unveiling the Black Box: Explaining AI and CNNs
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+                Explore the cutting-edge research in model interpretability presented in the Jeevan Thesis Paper.
+            </p>
+            <a href="#research" class="btn-primary inline-block">Dive Deeper into CNN Interpretability</a>
+        </div>
+    </section>
+
+    <section id="research" class="section-padding bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">The Jeevan Thesis Paper: Enhancing CNN Interpretability</h2>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-700">The Challenge of Interpretability</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        Artificial Intelligence (AI) has undergone rapid growth, leading to massive changes across various fields. While powerful, modern AI models, especially Convolutional Neural Networks (CNNs) used in image processing, have evolved into "black box" models. Their decision-making processes are often not fully clear to the end user, raising questions about trust and adoption, particularly in critical industries like healthcare, security, and finance.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        To mitigate these challenges, the field of Explainable Artificial Intelligence (XAI) has emerged. XAI aims to increase the trust and credibility of AI by providing ways of understanding the rationale behind the execution of intricate models.
+                    </p>
+                </div>
+                <div class="flex justify-center items-center">
+                    <img src="https://placehold.co/600x400/e0f2fe/0288d1?text=AI+Black+Box" alt="AI Black Box Concept" class="rounded-xl shadow-lg w-full max-w-md">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center mt-16">
+                <div class="flex justify-center items-center order-2 md:order-1">
+                    <img src="Model.jpg" alt="Research Flow Diagram" class="rounded-xl shadow-lg w-full max-w-md">
+                </div>
+                <div class="order-1 md:order-2">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-700">Our Novel Approach: A Decision Tree Approach Using Grad-CAM and Wavelet Transforms</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        This research extends previous work on interpreting CNNs to apply improved techniques for understanding their decision-making in multi-class classification tasks. Traditionally, CNN classification was explained using feature map extraction and decision trees.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        In this work, we utilize **Grad-CAM (Gradient-weighted Class Activation Mapping)** to obtain heat maps that visually illustrate the regions in an image responsible for the CNN's class distinction. To enhance the readability of these heatmaps, **wavelet transforms** are employed to denoise the cropped images prior to Grad-CAM application. Subsequently, a **decision tree** is constructed by extracting key features like area, perimeter, and aspect ratio from these refined heatmaps.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
+                <h3 class="text-2xl font-semibold mb-4 text-blue-700">Key Contributions</h3>
+                <p class="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
+                    This approach offers insightful understanding of the CNN’s decision and its rationale for categorizing image data into six different classes. We aim to provide significant additions to the current body of model interpretability research by focusing on CNN behavior and laying groundwork for more practical and effective methods of explaining intricate machine learning.
+                </p>
+                <a href="#how-it-works" class="btn-primary inline-block mt-8">Explore Our Methods in Detail</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="section-padding bg-gray-50">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">How It Works: Demystifying CNN Decisions</h2>
+
+            <div class="space-y-16">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-blue-700">Convolutional Neural Networks (CNNs) - The Basics</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                            CNNs are state-of-the-art algorithms that have revolutionized image processing, solving problems like image recognition, object detection, segmentation, and tracking. Their power comes from their ability to automatically learn hierarchical features from data.
+                        </p>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            However, as these models become deeper and more complex (e.g., VGG, ResNet), understanding *why* they make specific predictions becomes a challenge. This opacity highlights the need for interpretability techniques.
+                        </p>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <img src="CNN.jpg" alt="CNN Architecture Diagram" class="rounded-xl shadow-lg w-full max-w-md">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="flex justify-center items-center order-2 md:order-1">
+                        <img src="Heatmaps.png" alt="Grad-CAM Heatmap Example" class="rounded-xl shadow-lg w-full max-w-md">
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <h3 class="text-2xl font-semibold mb-4 text-blue-700">Seeing What the CNN Sees: Gradient-weighted Class Activation Mapping (Grad-CAM)</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                            Grad-CAM is a powerful technique that helps us visualize the "attention" of a CNN. It generates heat maps that are overlaid on the original image, highlighting the specific regions that were most influential in the CNN's classification decision.
+                        </p>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            This method relies on the gradients of the target class score with respect to the feature maps of the final convolutional layer, making the CNN's decision human-interpretable.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-blue-700">Sharpening the Focus: The Role of Wavelet Transforms</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                            While Grad-CAM heatmaps are insightful, their quality can sometimes be improved. Our research utilizes wavelet transforms to denoise these heatmaps, especially after cropping relevant image regions.
+                        </p>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Wavelet transforms help in enhancing the readability and clarity of the heatmaps by reducing noise and sharpening important features, ensuring that the visual explanations are as precise and informative as possible.
+                        </p>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <img src="Wavelet.png" alt="Wavelet Transform Effect on Image" class="rounded-xl shadow-lg w-full max-w-md">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="flex justify-center items-center order-2 md:order-1">
+                        <img src="Picture1.png" alt="Decision Tree Diagram" class="rounded-xl shadow-lg w-full max-w-md">
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <h3 class="text-2xl font-semibold mb-4 text-blue-700">From Visuals to Logic: Building Decision Trees for Classification Rationale</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                            After obtaining refined heatmaps, we extract quantitative features such as the area, perimeter, and aspect ratio of the highlighted regions. These numerical features are then used to construct a decision tree.
+                        </p>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            This decision tree acts as a human-interpretable model that mimics the CNN's decision-making process, providing clear, rule-based explanations for how image data is categorized into six different classes. It bridges the gap between complex neural network behavior and understandable logic.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding bg-blue-800 text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">About the Author & Contact</h2>
+            <div class="max-w-3xl mx-auto text-lg leading-relaxed">
+                <p class="mb-6">
+                    This website is based on the Master of Science thesis by Jeevan Umesha, titled "Enhancing Interpretability of Convolutional Neural Networks: A Decision Tree Approach Using Grad-CAM and Wavelet Transforms for Multi-Class Classification."
+                </p>
+                <p class="mb-6">
+                    Jeevan Umesha is a dedicated researcher in the field of Artificial Intelligence, with a particular interest in making complex machine learning models more transparent and understandable. This thesis represents a significant contribution to the growing field of Explainable AI (XAI).
+                </p>
+                <p class="mb-6">
+                    For academic inquiries or further discussion regarding this research, please feel free to reach out.
+                </p>
+                <p class="text-xl font-semibold mb-8">
+                    Email: <a href="mailto:your.email@example.com" class="text-blue-200 hover:underline">your.email@example.com</a>
+                </p>
+                <a href="Thesis_Jeevan_U.pdf" target="_blank" class="btn-primary bg-white text-blue-800 hover:bg-gray-100 inline-block">Download Full Thesis Paper</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm">
+        <div class="container mx-auto">
+            &copy; 2024 Jeevan Thesis Paper. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
